@@ -7,6 +7,7 @@ import (
 	"go/token"
 	"log"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -29,14 +30,17 @@ func main() {
 		ast.Inspect(f, func(n ast.Node) bool {
 			switch x := n.(type) {
 			case *ast.FuncDecl:
+				if !ast.IsExported(x.Name.Name) {
+					return true
+				}
 				logFile.WriteString("## Function: " + x.Name.Name)
 				logFile.WriteString("\n\n")
 
-				logFile.WriteString("#### Comment: \n\n")
-
-				logFile.WriteString(x.Doc.Text())
-
-				logFile.WriteString("\n")
+				if !(strings.TrimSpace(x.Doc.Text()) == "") {
+					logFile.WriteString("#### Comment: \n\n")
+					logFile.WriteString(x.Doc.Text())
+					logFile.WriteString("\n")
+				}
 
 				if x.Type.Params != nil {
 					logFile.WriteString("#### parameter: \n")
