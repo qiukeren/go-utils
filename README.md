@@ -6,7 +6,7 @@ EncodigTest用于获取该content对应的
 编码
 
 #### parameter: 
-content (&{%!s(token.Pos=151) %!s(*ast.ArrayType=&{152 <nil> 0xc42000e3e0})}) 
+content (&{%!s(token.Pos=151) %!s(*ast.ArrayType=&{152 <nil> 0xc42006a280})}) 
 
 #### return: 
 encoding(string) err(error) 
@@ -48,7 +48,7 @@ url1 site (string)
 url1 (string) 
 
 #### return: 
-(&{%!s(token.Pos=1777) %!s(*ast.SelectorExpr=&{0xc4200985c0 0xc4200985e0})}) (error) 
+(&{%!s(token.Pos=1777) %!s(*ast.SelectorExpr=&{0xc4200a8460 0xc4200a8480})}) (error) 
 
 
 
