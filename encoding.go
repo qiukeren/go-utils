@@ -4,6 +4,8 @@ import (
 	"github.com/endeveit/enca"
 )
 
+//EncodigTest用于获取该content对应的
+//编码
 func EncodingTest(content *[]byte) (encoding string, err error) {
 	encoding = ""
 	defer func() {
