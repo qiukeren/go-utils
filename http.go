@@ -7,6 +7,7 @@ import (
 	"time"
 )
 
+//Get is a common http client for httpGet operations and hide UA as GoogleBot.
 func Get(urls string) ([]byte, error) {
 
 	req, err := http.NewRequest("GET", urls, nil)

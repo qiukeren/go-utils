@@ -4,8 +4,7 @@ import (
 	"github.com/endeveit/enca"
 )
 
-//EncodigTest用于获取该content对应的
-//编码
+//EncodingTest is a third party library to get the encoding of certain type `[]byte`, which usually is UTF-8.
 func EncodingTest(content *[]byte) (encoding string, err error) {
 	encoding = ""
 	defer func() {

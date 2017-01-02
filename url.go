@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+//FormatUrl is a function for spiders to format urls when the url comes like "/path/to/html" to "http://www.xxx.com/path/to/html"
 func FormatUrl(url1, site string) (string, error) {
 
 	if strings.HasPrefix(strings.TrimSpace(url1), "javascript:") {
@@ -26,10 +27,7 @@ func FormatUrl(url1, site string) (string, error) {
 	return u.String(), nil
 }
 
-func ParseUrl(url1 string) (*url.URL, error) {
-	return url.Parse(url1)
-}
-
+//IsCurrentSite is a function to test the current url belongs to the current site.
 func IsCurrentSite(url1 string, site string, protocol string) bool {
 	u, err := url.Parse(url1)
 	if err != nil {
