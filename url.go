@@ -6,6 +6,15 @@ import (
 	"strings"
 )
 
+//urlencode
+func UrlEncode(url1 string) {
+	return url.QueryEscape(url1)
+}
+
+func UrlDecode(url1 string) {
+	return url.QueryUnescape(url1)
+}
+
 //FormatUrl is a function for spiders to format urls when the url comes like "/path/to/html" to "http://www.xxx.com/path/to/html"
 func FormatUrl(url1, site string) (string, error) {
 
