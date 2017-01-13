@@ -7,7 +7,7 @@ import (
 	"go/token"
 	"log"
 	"os"
-	//"strings"
+	"strings"
 )
 
 func main() {
@@ -36,11 +36,11 @@ func main() {
 				logFile.WriteString("## Function: " + x.Name.Name)
 				logFile.WriteString("\n\n")
 
-				// if !(strings.TrimSpace(x.Doc.Text()) == "") {
-				// 	logFile.WriteString("#### Comment: \n\n")
-				// 	logFile.WriteString(x.Doc.Text())
-				// 	logFile.WriteString("\n")
-				// }
+				if !(strings.TrimSpace(x.Doc.Text()) == "") {
+					logFile.WriteString("#### Comment: \n\n")
+					logFile.WriteString(x.Doc.Text())
+					logFile.WriteString("\n")
+				}
 
 				// if x.Type.Params != nil {
 				// 	logFile.WriteString("#### parameter: \n")
