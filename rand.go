@@ -5,10 +5,10 @@ import (
 	"time"
 )
 
-const lower = "abcdefghijklmnopqrstuvwxyz"
-const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-const digit = "0123456789"
-const punct = "~!@#$%^&*()_+-="
+const LowerString = "abcdefghijklmnopqrstuvwxyz"
+const UpperString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const DigitString = "0123456789"
+const PunctString = "~!@#$%^&*()_+-="
 
 func init() {
 	rand.Seed(time.Now().UTC().UnixNano())
