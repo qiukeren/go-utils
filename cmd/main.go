@@ -36,34 +36,34 @@ func main() {
 				logFile.WriteString("## Function: " + x.Name.Name)
 				logFile.WriteString("\n\n")
 
-				if !(strings.TrimSpace(x.Doc.Text()) == "") {
-					logFile.WriteString("#### Comment: \n\n")
-					logFile.WriteString(x.Doc.Text())
-					logFile.WriteString("\n")
-				}
+				// if !(strings.TrimSpace(x.Doc.Text()) == "") {
+				// 	logFile.WriteString("#### Comment: \n\n")
+				// 	logFile.WriteString(x.Doc.Text())
+				// 	logFile.WriteString("\n")
+				// }
 
-				if x.Type.Params != nil {
-					logFile.WriteString("#### parameter: \n")
-					for _, v := range x.Type.Params.List {
-						for _, name := range v.Names {
-							logFile.WriteString(name.Name)
-							logFile.WriteString(" ")
-						}
-						logFile.WriteString(fmt.Sprintf("(%s) ", v.Type))
-					}
-				}
+				// if x.Type.Params != nil {
+				// 	logFile.WriteString("#### parameter: \n")
+				// 	for _, v := range x.Type.Params.List {
+				// 		for _, name := range v.Names {
+				// 			logFile.WriteString(name.Name)
+				// 			logFile.WriteString(" ")
+				// 		}
+				// 		logFile.WriteString(fmt.Sprintf("(%s) ", v.Type))
+				// 	}
+				// }
 
-				logFile.WriteString("\n\n")
-				if x.Type.Results != nil {
-					logFile.WriteString("#### return: \n")
-					for _, v := range x.Type.Results.List {
-						for _, name := range v.Names {
-							logFile.WriteString(name.Name)
-						}
+				// logFile.WriteString("\n\n")
+				// if x.Type.Results != nil {
+				// 	logFile.WriteString("#### return: \n")
+				// 	for _, v := range x.Type.Results.List {
+				// 		for _, name := range v.Names {
+				// 			logFile.WriteString(name.Name)
+				// 		}
 
-						logFile.WriteString(fmt.Sprintf("(%s) ", v.Type))
-					}
-				}
+				// 		logFile.WriteString(fmt.Sprintf("(%s) ", v.Type))
+				// 	}
+				// }
 				logFile.WriteString("\n\n")
 				logFile.WriteString("\n\n")
 
