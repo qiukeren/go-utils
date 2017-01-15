@@ -1,25 +1,3 @@
-## Function: P
-
-#### Comment: 
-
-P is a quick function to print struct.
-
-
-
-
-
-## Function: IsDockerHost
-
-
-
-
-
-## Function: IsDockerContainer
-
-
-
-
-
 ## Function: EncodingTest
 
 #### Comment: 
@@ -30,11 +8,29 @@ EncodingTest is a third party library to get the encoding of certain type `[]byt
 
 
 
-## Function: Get
+## Function: TestRandString
+
+
+
+
+
+## Function: BenchmarkRandString
+
+
+
+
+
+## Function: P
 
 #### Comment: 
 
-Get is a common http client for httpGet operations and hide UA as GoogleBot.
+P is a quick function to print struct.
+
+
+
+
+
+## Function: RandString
 
 
 
@@ -76,19 +72,47 @@ IsCurrentSite is a function to test the current url belongs to the current site.
 
 
 
-## Function: RandString
+## Function: IsDockerHost
 
 
 
 
 
-## Function: TestRandString
+## Function: IsDockerContainer
 
 
 
 
 
-## Function: BenchmarkRandString
+## Function: Exist
+
+
+
+
+
+## Function: Touch
+
+
+
+
+
+## Function: ReadToString
+
+
+
+
+
+## Function: WriteBytes
+
+
+
+
+
+## Function: Get
+
+#### Comment: 
+
+Get is a common http client for httpGet operations and hide UA as GoogleBot.
 
 
 

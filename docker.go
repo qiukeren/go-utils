@@ -7,7 +7,7 @@ import (
 
 func IsDockerHost() bool {
 	endpoint := "unix:///var/run/docker.sock"
-	client, err := docker.NewClient(endpoint)
+	_, err := docker.NewClient(endpoint)
 	if err != nil {
 		return false
 	}
@@ -15,7 +15,7 @@ func IsDockerHost() bool {
 }
 
 func IsDockerContainer() bool {
-	if fileInfo, err := os.Stat("/.dockerenv"); err == nil {
+	if _, err := os.Stat("/.dockerenv"); err == nil {
 		return true
 	}
 	return false

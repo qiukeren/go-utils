@@ -7,11 +7,11 @@ import (
 )
 
 //urlencode
-func UrlEncode(url1 string) {
+func UrlEncode(url1 string) string {
 	return url.QueryEscape(url1)
 }
 
-func UrlDecode(url1 string) {
+func UrlDecode(url1 string) (string, error) {
 	return url.QueryUnescape(url1)
 }
 
