@@ -1,4 +1,36 @@
+## Function: Get
+
+#### Comment: 
+
+Get is a common http client for httpGet operations and hide UA as GoogleBot.
+
+
+
+
+
+## Function: P
+
+#### Comment: 
+
+P is a quick function to print struct.
+
+
+
+
+
 ## Function: RandString
+
+
+
+
+
+## Function: TestRandString
+
+
+
+
+
+## Function: BenchmarkRandString
 
 
 
@@ -40,6 +72,18 @@ IsCurrentSite is a function to test the current url belongs to the current site.
 
 
 
+## Function: IsDockerHost
+
+
+
+
+
+## Function: IsDockerContainer
+
+
+
+
+
 ## Function: Exist
 
 
@@ -64,45 +108,13 @@ IsCurrentSite is a function to test the current url belongs to the current site.
 
 
 
-## Function: Get
-
-#### Comment: 
-
-Get is a common http client for httpGet operations and hide UA as GoogleBot.
+## Function: Recover
 
 
 
 
 
-## Function: P
-
-#### Comment: 
-
-P is a quick function to print struct.
-
-
-
-
-
-## Function: TestRandString
-
-
-
-
-
-## Function: BenchmarkRandString
-
-
-
-
-
-## Function: IsDockerHost
-
-
-
-
-
-## Function: IsDockerContainer
+## Function: TestRecover
 
 
 
