@@ -24,6 +24,15 @@ func ReadToString(filePath string) (string, error) {
 	return string(b), nil
 }
 
+func ReadToBytes(filePath string) ([]byte, error) {
+	b, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		return []byte(""), err
+
+	}
+	return b, nil
+}
+
 func WriteBytes(filePath string, b []byte) (int, error) {
 	os.MkdirAll(path.Dir(filePath), os.ModePerm)
 	fw, err := os.Create(filePath)
