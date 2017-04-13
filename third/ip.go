@@ -13,17 +13,19 @@ type Ip struct {
 	IPDecimal int    `json:"ip_decimal"`
 }
 
-func OutIp() (*Ip, error) {
+func OutIp() (string, error) {
 	ip := Ip{}
 	data, err := common.Get("https://ifconfig.co/json")
 
 	if err != nil {
-		return nil, err
+		return "", err
 	}
 	err = json.Unmarshal(data, &ip)
 
-	if err != nil {
-		return nil, err
+	if err == nil {
+		return ip.IP, nil
 	}
-	return &ip, nil
+	data, err = common.Get("http://whatismyip.akamai.com")
+	return string(data), err
+
 }
