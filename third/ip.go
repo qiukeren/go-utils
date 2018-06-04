@@ -26,6 +26,10 @@ func OutIp() (string, error) {
 		return ip.IP, nil
 	}
 	data, err = common.Get("http://whatismyip.akamai.com")
-	return string(data), err
+	if err == nil {
+		return string(data), nil
+	}
 
+	data, err = common.Get("http://ifconfig.io")
+	return string(data), err
 }
