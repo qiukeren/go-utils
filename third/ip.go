@@ -17,14 +17,13 @@ func OutIp() (string, error) {
 	ip := Ip{}
 	data, err := common.Get("https://ifconfig.co/json")
 
-	if err != nil {
-		return "", err
-	}
-	err = json.Unmarshal(data, &ip)
-
 	if err == nil {
-		return ip.IP, nil
+		err = json.Unmarshal(data, &ip)
+		if err == nil {
+			return ip.IP, nil
+		}
 	}
+
 	data, err = common.Get("http://whatismyip.akamai.com")
 	if err == nil {
 		return string(data), nil
